@@ -1,0 +1,150 @@
+/* General Reset */
+body, h1, p, button, input {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    background-color: #f7f9fc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  .header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0047ab;
+  }
+  
+  #toggle-mode {
+    background-color: #ffb703;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #toggle-mode:hover {
+    background-color: #fb8500;
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin: 20px 0;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .primary-button {
+    padding: 15px 20px;
+    background-color: #48cae4;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .primary-button:hover {
+    background-color: #0096c7;
+  }
+  
+  .adjust-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  #text-size {
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  .footer {
+    margin-top: 20px;
+  }
+  
+  .footer a {
+    color: #0077b6;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Ripple Effect */
+.ripple {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple-animation 0.6s linear;
+  }
+  
+  @keyframes ripple-animation {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 200%;
+      height: 200%;
+      opacity: 0;
+    }
+  }
+  
+  /* High-Contrast Mode */
+  body.high-contrast {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  body.high-contrast .primary-button {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  body.high-contrast #toggle-mode {
+    background-color: #444;
+    color: #fff;
+  }
+  
